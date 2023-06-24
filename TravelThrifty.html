@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TravelThrifty</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /*height: 100vh;*/
+        margin: 0;
+        font-family: "Times New Roman";
+      }
+      .title {
+        font-size: 100px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .team-members {
+        /*text-align: center;*/
+        display: flex;
+        margin-top: 0px;
+        display: flex;
+        font-weight: bold;
+      }
+      .member {
+        font-size: 30px;
+        margin-right: 10px;
+      }
+      .creators-box {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        background-color: #ccc;
+        cursor: pointer;
+      }
+      .airplane {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        z-index: 0;
+        opacity: 0.7; /* visibility of the image */
+      }
+    </style>
+
+    <script>
+      function openTeamMembers() {
+        var teamMembers = document.getElementById("team-members");
+        teamMembers.style.display = "flex";
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+    </script>
+  </head>
+
+  <body>
+    <img class="airplane" src="images/airplane.jpg" alt="" />
+    <h1 class="title">TravelThrifty</h1>
+    <div class="creators-box" onclick="openTeamMembers()">Creators</div>
+    <div class="team-members" id="team-members">
+      <h2 class="member">Fanny Zheng,</h2>
+      <h2 class="member">Cindy Mei,</h2>
+      <h2 class="member">Danny Zheng,</h2>
+      <h2 class="member">Joyce Zheng</h2>
+    </div>
+  </body>
+</html>
