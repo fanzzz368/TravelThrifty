@@ -1,0 +1,20 @@
+{
+  "name": "TravelThrifty",
+  "version": "1.0.0",
+  "description": "WaffleHacks Project by Team CS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanzzz368/TravelThrifty.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fanzzz368/TravelThrifty/issues"
+  },
+  "homepage": "https://github.com/fanzzz368/TravelThrifty#readme"
+}
