@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TravelThrifty</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        font-family: "Times New Roman";
+      }
+      .title {
+        font-size: 100px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .creators-box {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        background-color: #ccc;
+        cursor: pointer;
+      }
+      .airplane {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        z-index: 0;
+        opacity: 0.7;
+      }
+      .team-members {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+      .member {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .member-description {
+        font-size: 16px;
+        text-align: center;
+      }
+    </style>
+
+    <script>
+      function openTeamMembers() {
+        var teamMembers = [
+          {
+            name: "Fanny Zheng",
+            description:
+              "Hi, my name is Fanny Zheng and I am a junior at Northeastern University. I had fun coding this with my friends and family.",
+          },
+          {
+            name: "Cindy Mei",
+            description:
+              "Hi! I am Cindy Mei and I am a junior at UMass Amherst. I am passionate about pursuing a career in web development and I hope to make a positive impact in the digital world.",
+          },
+          {
+            name: "Danny Zheng",
+            description:
+              "Hi! I am Danny Zheng and I am a upcoming junior in high school. I enjoy playing tennis and robotics competitions.",
+          },
+          {
+            name: "Joyce Zheng",
+            description:
+              "Hi! I'm Joyce Zheng, a junior at NQHS graduating class of 2025. I enjoy learning how to code and sharing it with friends and family. I also like playing violin.",
+          },
+        ];
+        var membersWindow = window.open();
+        membersWindow.document.write("<h1>Team Members: </h1>");
+
+        var membersContainer = membersWindow.document.createElement("div");
+        membersContainer.className = "team-members";
+
+        teamMembers.forEach(function (member) {
+          var memberBox = membersWindow.document.createElement("div");
+          memberBox.className = "member";
+
+          var memberName = membersWindow.document.createElement("span");
+          memberName.innerHTML = member.name;
+          memberName.style.fontWeight = "bold";
+          memberName.style.fontSize = "24px";
+
+          var memberDescription = membersWindow.document.createElement("p");
+          memberDescription.className = "member-description";
+          memberDescription.innerHTML = member.description;
+          memberDescription.style.fontSize = "16px";
+
+          memberBox.appendChild(memberName);
+          memberBox.appendChild(memberDescription);
+
+          membersContainer.appendChild(memberBox);
+        });
+
+        membersWindow.document.body.appendChild(membersContainer);
+      }
+    </script>
+  </head>
+
+  <body>
+    <img class="airplane" src="images/airplane.jpg" alt="" />
+    <h1 class="title">TravelThrifty</h1>
+    <div class="creators-box" onclick="openTeamMembers()">Creators</div>
+  </body>
+</html>
